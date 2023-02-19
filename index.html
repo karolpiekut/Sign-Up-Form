@@ -16,18 +16,31 @@
 </div>
 <div id="right">
     <div id="right-up">
-        <p class="text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</p>
-    <p class="text">You <em>know</em> you want to.</p>
-</div>
-<div id="right-mid">
-    <p class="text">Let's do this!</p>
-
-
-</div>
-<div id="right-bottom">
-<button type="submit">Create Account</button>
-    <p>Already have an account? Log in</p>
-</div>
+        <p class="text text-top">This is not a real online service! You know you need something like this in your life
+            to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</p>
+        <p class="text">You <em>know</em> you want to.</p>
+    </div>
+    <div id="right-mid">
+        <p class="text">Let's do this!</p>
+        <form action="" method="post" id="login-form">
+            <label for='first-name'>FIRST NAME</label>
+            <input id='first-name' name='first-name' type='text'/>
+            <label for='last-name'>LAST NAME</label>
+            <input id='last-name' name='last-name' type='text'/>
+            <label for="email">EMAIL</label>
+            <input id="email" name="email" type="email"/>
+            <label for="phone">PHONE NUMBER</label>
+            <input id="phone" name="phone" type="tel"/><!--pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"-->
+            <label for="password">PASSWORD</label>
+            <input id="password" name="password" type="password"/>
+            <label for="confirm-password">CONFIRM PASSWORD</label>
+            <input id="confirm-password" name="confirm-password" type="password">
+        </form>
+    </div>
+    <div id="right-bottom">
+        <button type="submit">Create Account</button>
+        <p>Already have an account? Log in</p>
+    </div>
 </div>
 </body>
 </html>
