@@ -1,4 +1,5 @@
 body {
+    font-family: Arial, 'Trebuchet MS', sans-serif;
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -7,7 +8,36 @@ body {
     border: 0;
     background: #eff0f1;
     box-sizing: border-box;
+}
+@font-face {
+    font-family: "norse";
+    src: local(norse),
+    url("Norse-Bold.otf");
+}
+p {
+    margin-block: 0;
+}
+#logo {
+    margin-top: 25vh;
+    background-color: rgba(0,0,0,0.35);
+    height: 15vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+img {
+    height: 13vh;
+}
+
+#logo-text {
+    line-height: 15vh;
+    color: white;
+    font-size: 10vh;
+    font-family: norse, Arial, sans-serif;
+    padding-top: 2.5vh;
 }
 
 #left {
@@ -43,13 +73,16 @@ body {
 }
 
 .text {
-    font-family: Arial, 'Trebuchet MS', sans-serif;
     font-size: x-large;
-    margin-right: 14rem;
+    width: 44vw;
 }
 
 .text-top {
 
+}
+
+label {
+    font-size: small;
 }
 
 button {
