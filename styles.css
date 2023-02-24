@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "norse";
+    src: local(norse),
+    url("Norse-Bold.otf");
+}
 html {
     height: 100%;
     padding: 0;
@@ -16,14 +21,12 @@ body {
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "norse";
-    src: local(norse),
-    url("Norse-Bold.otf");
-}
-
 p {
     margin-block: 0;
+}
+
+img {
+    height: 13vh;
 }
 
 /*left side*/
@@ -45,10 +48,6 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-img {
-    height: 13vh;
 }
 
 #logo-text {
@@ -163,34 +162,3 @@ button {
     max-width: 200px;
     max-height: 50px;
 }
-
-/*
-don't forget about media queries
-
-@media only screen and (max-width: 1000px), (max-height: 500px) {
-    body {
-        flex-direction: column;
-        margin: 0 auto 0 auto;
-        width: 80vw
-    }
-
-    #right {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #left {
-        width: 100%;
-    }
-
-    #logo {
-        margin: 15vh 0 5vh 0;
-    }
-
-    #right-mid {
-        background: green;
-    }
-
-}
-
-*/
