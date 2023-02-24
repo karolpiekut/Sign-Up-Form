@@ -1,7 +1,9 @@
 @font-face {
     font-family: "norse";
-    src: url("../fonts/Norse-Bold.otf");
+    src: local(norse),
+    url("../fonts/Norse-Bold.otf");
 }
+
 html {
     height: 100%;
     padding: 0;
