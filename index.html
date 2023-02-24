@@ -11,39 +11,64 @@
 <body>
 
 <div id="left">
-<div id="logo">
-    <img src="odin-lined.png" alt="Odin Logo">
-    <p id="logo-text">ODIN</p>
-</div>
+    <div id="logo">
+        <img src="odin-lined.png" alt="Odin Logo">
+        <p id="logo-text">ODIN</p>
+    </div>
 
 </div>
 <div id="right">
     <form action="" method="post" id="login-form">
-    <div id="right-top">
-        <p class="text-top">This is not a real online service! You know you need something like this in your life
-            to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</p>
-        <p class="text-top">You <em>know</em> you want to.</p>
-    </div>
-    <div id="right-mid">
-        <p class="text-mid">Let's do this!</p>
-            <label for='first-name'>FIRST NAME</label>
-            <input id='first-name' name='first-name' type='text'/>
-            <label for='last-name'>LAST NAME</label>
-            <input id='last-name' name='last-name' type='text'/>
-            <label for="email">EMAIL</label>
-            <input id="email" name="email" type="email"/>
-            <label for="phone">PHONE NUMBER</label>
-            <input id="phone" name="phone" type="tel"/><!--pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"-->
-            <label for="password">PASSWORD</label>
-            <input id="password" name="password" type="password"/>
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input id="confirm-password" name="confirm-password" type="password">
-    </div>
-    <div id="right-bottom">
-        <button type="submit">Create Account</button>
-        <p class="text-bottom">Already have an account? Log in</p>
-    </div>
+        <div id="right-top">
+            <p class="text-top">This is not a real online service! You know you need something like this in your life
+                to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</p>
+            <p class="text-top">You <em>know</em> you want to.</p>
+        </div>
+        <div id="right-mid">
+            <p class="text-mid">Let's do this!</p>
+            <div id="inputs">
+                <div id="inputs-left">
+                    <label for='first-name'>FIRST NAME</label>
+                    <input tabindex="1" id='first-name' name='first-name' type='text'/>
+                    <label for="email">EMAIL</label>
+                    <input tabindex="3" id="email" name="email" type="email"/>
+                    <label for="password">PASSWORD</label>
+                    <input tabindex="5" id="password" name="password" type="password"/>
+                </div>
+                <div id="inputs-right">
+                    <label for='last-name'>LAST NAME</label>
+                    <input tabindex="2" id='last-name' name='last-name' type='text'/>
+                    <label for="phone">PHONE NUMBER</label>
+                    <input tabindex="4" id="phone" name="phone" type="tel"/><!--pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"-->
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input tabindex="6" id="confirm-password" name="confirm-password" type="password">
+                </div>
+            </div>
+        </div>
+        <div id="right-bottom">
+            <button id="btn" type="submit" onclick="passwordValidate()">Create Account</button>
+            <p class="text-bottom">Already have an account? Log in</p>
+        </div>
     </form>
 </div>
+<script>
+   function passwordValidate() {
+       //will make this pretty later
+       //let name = document.querySelector("#first-name");
+       //let surname = document.querySelector("#last-name");
+       //let email = document.querySelector("#email");
+       //let phone = document.querySelector("#phone");
+       let password = document.querySelector("#password");
+       let confirmPassword = document.querySelector("#confirm-password");
+
+       if (password.value === "") {
+           alert("Please enter your password.");
+       } else if (password.value !== confirmPassword.value) {
+           alert("Passwords does not match");
+       } else {
+           alert("I am so tired.")
+       }
+   }
+</script>
 </body>
 </html>

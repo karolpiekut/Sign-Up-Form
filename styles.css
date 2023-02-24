@@ -3,8 +3,9 @@ html {
     padding: 0;
     margin: 0;
 }
+
 body {
-    font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -14,11 +15,13 @@ body {
     background: #eff0f1;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "norse";
     src: local(norse),
     url("Norse-Bold.otf");
 }
+
 p {
     margin-block: 0;
 }
@@ -32,9 +35,10 @@ p {
     position: relative;
     width: 37%;
 }
+
 #logo {
     margin-top: 25vh;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0, 0, 0, 0.35);
     height: 15vh;
     width: auto;
     display: flex;
@@ -70,7 +74,7 @@ img {
 }
 
 #right-top {
-    height: calc(33% - 50px);
+    height: calc(35% - 50px);
     display: flex;
     flex-direction: column;
     gap: 3vh;
@@ -78,53 +82,115 @@ img {
     padding-bottom: 50px;
 }
 
+#inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1.55vh;
+}
+
+#inputs-left, #inputs-right {
+    gap: 10%;
+    display: flex;
+    flex-direction: column;
+
+}
+
 #right-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 0 0 0 40px;
-    flex: 1;
-    height: 34%;
+    height: 30%;
     width: auto;
     background: #f5f5f5;
     position: relative;
-
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
+
 #right-bottom {
-    height: calc(33% - 50px);
-    padding-top: 50px;
+    height: calc(35% - 50px);
+    padding-top: 4vh;
     position: relative;
 }
 
 .text-top {
-    font-size: clamp(16px, 4vw, 28px);
+    font-size: 3vh;
     padding-right: 10vw;
 }
 
 .text-mid {
-    padding: 30px 0 30px 0;
-    font-size: clamp(16px, 4vw, 28px);
+    padding: 1.5vh 0 1.5vh 0;
+    font-size: 3vh
 }
 
 .text-bottom {
-    padding-top: 20px;
-    font-size: clamp(12px, 3vw, 20px);
+    padding-top: 2vh;
+    font-size: 1.8vh;
 }
 
 label {
-    font-size:  clamp(10px, 2vw, 15px);
+    font-size: 1.2vh;
+    margin: 1.5vh 0 0 0;
+}
+
+input {
+    height: 2.5vh;
+    width: 18vw;
+    border-radius: 4px;
+    border-color: lightsteelblue;
+    font-size: 18px;
+    border-width: 1px;
+    margin: 3px 0 3px 0;
+}
+
+input :focus {
+    border-color: dodgerblue;
 }
 
 button {
-    background: #68a7e8;
+    background: #5c7dac;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     border-style: none;
     width: 20vw;
     height: 5vh;
     border-radius: 10px;
     color: white;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 2vh;
     max-width: 200px;
     max-height: 50px;
 }
 
+/*
+don't forget about media queries
 
-/*don't forget about media queries*/
+@media only screen and (max-width: 1000px), (max-height: 500px) {
+    body {
+        flex-direction: column;
+        margin: 0 auto 0 auto;
+        width: 80vw
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left {
+        width: 100%;
+    }
+
+    #logo {
+        margin: 15vh 0 5vh 0;
+    }
+
+    #right-mid {
+        background: green;
+    }
+
+}
+
+*/
